@@ -15,7 +15,7 @@ app.get("/api/ping", function (req, res) {
     return res.send("Backend connected!");
 });
 
-// Handles any requests that don"t match the ones above
+// Handles other requests and redirect to index.html
 app.get("*", (req,res) =>{
     res.sendFile(path.join(__dirname+"/views/index.html"));
 });
